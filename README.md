@@ -1,6 +1,6 @@
-# keyuxt
+# :key:uxt
 
-> Starter for Keystone.js with Nuxt.js
+> Keyuxt is a starter for Keystone.js with Nuxt.js
 
 ## Build Setup
 
