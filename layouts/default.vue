@@ -1,31 +1,33 @@
 <template>
   <div>
+    <blog-nav/>
     <nuxt/>
-    <my-footer/>
+    <blog-footer/>
   </div>
 </template>
 
 <script>
-import MyFooter from '~/components/Footer.vue'
+import BlogNav from '~/components/Nav.vue'
+import BlogFooter from '~/components/Footer.vue'
 
 export default {
   components: {
-    MyFooter
+    BlogNav,
+    BlogFooter
   }
 }
 </script>
 
 <style>
-.container
-{
+.container {
   margin: 0;
   width: 100%;
   padding: 100px 0;
   text-align: center;
 }
 
-.button, .button:visited
-{
+.button,
+.button:visited {
   display: inline-block;
   color: black;
   letter-spacing: 1px;
@@ -36,14 +38,13 @@ export default {
   padding: 15px 45px;
 }
 
-.button:hover, .button:focus
-{
+.button:hover,
+.button:focus {
   color: #fff;
   background-color: #000;
 }
 
-.title
-{
+.title {
   color: #000;
   font-weight: 300;
   font-size: 2.5em;

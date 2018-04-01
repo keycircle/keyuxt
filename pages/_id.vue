@@ -1,9 +1,14 @@
 <template>
-  <div>
-    <h1>{{ post.title }}</h1>
-    <span>{{ post.state }}</span>
+  <div class="post">
+    <div class="author">
+      <img class="author__figure"></img>
+      <div class="author__body">
+        {{ post.author.name.first }} {{ post.author.name.last }}
+      </div>
+    </div>
+    <h1 class="post__title">{{ post.title }}</h1>
     <span>{{ post.publishedDate }}</span>
-    <p>{{ post.content.full }}</p>
+    <p v-html="post.content.extended"></p>
   </div>
 </template>
 
@@ -38,7 +43,12 @@ export default {
   margin: 0;
   margin-top: 10px;
 }
-.button {
-  margin-top: 30px;
+.post {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.post__title {
+  text-transform: uppercase;
 }
 </style>

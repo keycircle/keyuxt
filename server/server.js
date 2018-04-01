@@ -17,16 +17,7 @@ export default function (app) {
         filter: {
           state: 'published'
         },
-        populate: [
-          {
-            path: 'author',
-            select: 'name'
-          },
-          {
-            path: 'categories',
-            select: 'name'
-          }
-        ]
+        populate: 'author'
       },
       PostCategory: {
         methods: ['list', 'retrieve']

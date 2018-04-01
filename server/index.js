@@ -1,7 +1,6 @@
 import keystone from 'keystone'
 import _ from 'lodash'
 import server from './server'
-console.log('SERVER', server)
 
 keystone.init({
   name: 'Keystone Boilerplate',
