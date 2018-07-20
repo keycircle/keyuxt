@@ -1,4 +1,7 @@
 export default class PostsRepository {
+  /**
+   * @param {AxiosClient} options.httpClient
+   */
   constructor ({ httpClient }) {
     this._httpClient = httpClient
   }

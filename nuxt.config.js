@@ -1,3 +1,8 @@
+/**
+ * NUXT.js configuration
+ * https://nuxtjs.org/guide/configuration/
+ */
+
 module.exports = {
   /*
   ** Headers of the page

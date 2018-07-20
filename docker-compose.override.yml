@@ -1,0 +1,36 @@
+version: '2'
+networks:
+  all:
+services:
+  server:
+    build: .
+    command: yarn run dev
+    ports:
+      # Application
+      - 3000:3000
+      # Node inspector
+      - 5858:5858
+    environment:
+      NODE_ENV: "development"
+      NODE_INSPECTOR_PORT: "5858"
+      CLOUDINARY_URL: ""
+      MONGODB_URI: "mongodb://mongo:27017/keyuxt"
+      MONGOLAB_URI: "mongodb://mongo:27017/keyuxt"
+      COOKIE_SECRET: "b6d0b0c630a49084d6e1caf0409ee5c7715155e162f7bcd5283d8071ea25442da4ff9786fd6241709beb6d91805c1681acfa6da5a20612d96d0f110f5abc7f9b"
+    links:
+      - mongo
+    volumes:
+      - .:/keyuxt
+      - /keyuxt/node_modules
+    depends_on:
+      - mongo
+    networks:
+      - all
+  mongo:
+    image: mongo
+    ports:
+      # Mongo
+      - 27017:27017
+    command: mongod --smallfiles
+    networks:
+      - all

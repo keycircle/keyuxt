@@ -2,13 +2,18 @@ import keystone from 'keystone'
 import RestfulKeystone from 'restful-keystone'
 import nuxt from './nuxt'
 
+/**
+ * REST API - Setting a basePath
+ * https://github.com/d-pac/restful-keystone#api
+ */
 const restfulKeystone = RestfulKeystone(keystone, {
   root: '/api/v1'
 })
 
 export default function (app) {
   /**
-   * Rest API
+   * REST API - Exposing the models
+   * https://github.com/d-pac/restful-keystone#expose
    */
   restfulKeystone
     .expose({
@@ -25,6 +30,9 @@ export default function (app) {
     })
     .start()
 
-  // Give nuxt middleware to express
+  /**
+   *  NUXT.js as middleware to render the pages
+   *  https://nuxtjs.org/api/nuxt-render#nuxt-render-req-res-
+   */
   app.use(nuxt.render)
 }
