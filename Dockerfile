@@ -1,4 +1,4 @@
-FROM node:10.6.0-alpine
+FROM node:10.8.0-alpine
 
 RUN apk add --no-cache --virtual build-deps make gcc g++ python curl
 
