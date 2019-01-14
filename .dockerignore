@@ -1,4 +1,3 @@
 node_modules/
+.git/
 .nuxt/
-.DS_Store
-.env

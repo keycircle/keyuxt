@@ -1,17 +1,12 @@
-FROM node:10.8.0-alpine
+FROM node:10.15.0-slim
 
-RUN apk add --no-cache --virtual build-deps make gcc g++ python curl
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-WORKDIR /keyuxt
+COPY package.json ./
 
-COPY yarn.lock package.json ./
-
-RUN yarn install
+RUN npm install
 
 COPY . .
 
-RUN yarn run build
-
-EXPOSE 3000
-
-CMD ["node", "build/main.js"]
+CMD [ "npm", "run", "dev" ]

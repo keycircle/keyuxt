@@ -2,21 +2,34 @@
 
 > Keyuxt is a starter for Keystone.js with Nuxt.js
 
+```bash
+
+/api # rest-api from keystonejs and nuxt initialization
+/updates # default data for keystonejs
+/app # nuxt aplication
+    /components
+    /layouts
+    /pages
+```
+
 ## Build Setup
 
 ```bash
+
+# with docker
+$ docker-compose up
+
+# ----- OR -----
+
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:4000
 $ npm run dev
 
 # build for production and launch server
 $ npm start
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js) and [Keystone.js docs](https://keystonejs.com/documentation/).
 
-## Backpack
-
-We use [backpack](https://github.com/palmerhq/backpack) to watch and build the application, so you can use the latest ES6 features (module syntax, async/await, etc.).
