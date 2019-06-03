@@ -11,7 +11,9 @@
         <div class="section">
           <div class="tabs is-centered">
             <ul>
-              <li><nuxt-link to="/">Home</nuxt-link></li>
+              <li>
+                <nuxt-link to="/">Home</nuxt-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -21,9 +23,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
-export default {
-
-}
+export default {};
 </script>

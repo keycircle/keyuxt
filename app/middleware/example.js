@@ -1,5 +1,3 @@
-import axios from 'axios'
+import axios from "axios";
 
-export default function ({ store }) {
-
-}
+export default function({ store }) {}

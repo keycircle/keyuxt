@@ -1,12 +1,10 @@
-FROM node:10.15.0-slim
+FROM node:12.3.1-slim
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package.json ./
-
-RUN npm install
-
 COPY . .
+
+RUN yarn install
 
 CMD [ "npm", "run", "dev" ]

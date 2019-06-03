@@ -1,11 +1,11 @@
-const sluggify = (words) => {
+const sluggify = words => {
   return words
     .toLowerCase()
-    .split(' ')
+    .split(" ")
     .map(word => word.trim())
-    .join('-');
-}
+    .join("-");
+};
 
 module.exports = {
-  sluggify,
-}
+  sluggify
+};

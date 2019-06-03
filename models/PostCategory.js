@@ -1,4 +1,4 @@
-const keystone = require('keystone');
+const keystone = require("keystone");
 const { Types } = keystone.Field;
 
 /**
@@ -6,16 +6,16 @@ const { Types } = keystone.Field;
  * ==================
  */
 
-const PostCategory = new keystone.List('PostCategory', {
-	autokey: { from: 'name', path: 'key', unique: true }
+const PostCategory = new keystone.List("PostCategory", {
+  autokey: { from: "name", path: "key", unique: true }
 });
 
 PostCategory.add({
-	name: { type: String, required: true },
-	description: { type: String },
-	image: { type: Types.CloudinaryImage },
+  name: { type: String, required: true },
+  description: { type: String },
+  image: { type: Types.CloudinaryImage }
 });
 
-PostCategory.relationship({ ref: 'Post', path: 'categories' });
+PostCategory.relationship({ ref: "Post", path: "categories" });
 
 PostCategory.register();
