@@ -10,7 +10,10 @@
           <div class="subheader-content has-text-centered">
             <p>
               {{ post.publishedDate}}
-              <span>{{ post.categories }}</span>
+              <span
+                class="tag is-primary"
+                v-for="cat in post.categories"
+              >{{ cat }}</span>
             </p>
             <hr>
           </div>
@@ -21,6 +24,12 @@
     </div>
   </div>
 </template>
+
+<style>
+.hero-body {
+  min-height: 75vh;
+}
+</style>
 
 <script>
 import axios from "axios";
