@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#">
-    :key:
+    <img src="https://user-images.githubusercontent.com/7957190/58878690-1f6df780-86d4-11e9-977b-5be56c3054bb.png" alt="keyuxt logo" width="130" height="130">
   </a>
 </p>
 
